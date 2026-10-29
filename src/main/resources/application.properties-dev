@@ -1,8 +1,17 @@
-# Configuración de Base de Datos (Plantilla)
+# Plantilla de configuracion: copiar a application.properties y completar
+spring.application.name=composite-api-demo
+server.port=8080
+
 spring.datasource.url=jdbc:postgresql://localhost:5432/tu_base_de_datos
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contrasena
 
-# Configuración de JPA / Hibernate
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+spring.jpa.defer-datasource-initialization=true
+spring.sql.init.mode=always
+
+microservices.base-url=http://localhost:8080
+exchange.api.base-url=https://api.frankfurter.dev
+http.client.connect-timeout-ms=2000
+http.client.read-timeout-ms=3000
